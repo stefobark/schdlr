@@ -1,0 +1,159 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='/bootstrap.min.css'>
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Hairline|Dosis" rel="stylesheet">
+	<style>
+		h1 {
+			font-family:"Bungee", latin;
+			font-size:50px;
+			margin:0;
+			line-height:50px;
+		}
+		p {
+			font-family:'Dosis',monospace;
+		}
+		#boxes {
+			border-radius:5px;
+			display:inline-block;
+			width:100%;
+			margin-top:15px;
+			margin-bottom:15px;
+		}
+		.calRow{
+			width:100%;
+		}
+		
+		h2{
+			font-family:"Bungee Hairline", latin;
+			font-size:40px;
+			line-height:40px;
+			margin:0;
+			padding:0;
+		}
+		.centered {
+			text-align:center;
+		}
+		#calendar{
+			background-color:rgba(0,0,0,0.5);
+			border-radius:5px;
+			color:white;
+			padding:5px;
+			font-family:"Dosis",latin;
+		}
+		.printYear {
+			position:absolute;
+			top:57px;
+			left:245px;
+			margin:0;
+			color:rgba(255,255,255,0.6);
+			padding:0;
+		}
+		#infoBox{
+			background-color:rgba(0,0,0,0.5);
+			border:rgba(255,255,255,.19) solid 1px;
+			border-radius:5px;
+			color:white;
+			font-family:"Dosis",latin;
+			padding:5px;
+			min-height:200px;
+		}
+		body {
+			background-color:rgba(0,0,0,0.4);
+		}
+		#rightBar {
+			width:200px;
+			margin:0px;
+		}
+		.big {
+			font-size:80px;
+		}
+		.dayBox {
+			float:left;
+			height:8%;
+			width:10%;
+			background-color:rgba(255,255,255,0.3);
+			border:white solid 1px;
+			border-radius:5px;
+			z-index:99999999;
+			text-align:right;
+			padding:10px;
+		}
+		.dayBox:hover {
+			background-color:rgba(255,255,255,0.8);
+			border:rgba(255,255,255,0.6) solid 1px;
+			color:#888;
+		}
+		#monthName {
+			font-size:30px;
+			margin-bottom:5px;
+		}
+		.mNamesRight:hover {
+			font-size:20px;
+		}
+		#time {
+			position:fixed;
+			bottom:-150;
+			right:-80px;
+			opacity:.1;
+		}
+		#utilityBar {
+			padding:5px;
+			font-family:'Dosis',monospace;
+			width:450px;
+			z-index:99999;
+			height:100px;
+			line-height:50px;
+			border-radius:5px;
+		}
+		#set,#remove {
+			opacity:.4;
+			text-align:left;
+			width:100%;
+			height:40%;
+		}
+		
+		#set:hover,#remove:hover {
+			opacity:.9;
+		}
+		.hourBlock{
+			height:150px;
+			border:rgba(0,0,0,.3) solid 1px;
+			border-radius:5px;
+			padding:5px;
+			background-color:rgba(255,255,255,0.3);
+
+		}
+	</style>
+</head>
+<body onload="start();">
+	
+		<div class='container'>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<h1 class='big'>SCHDLR</h1>
+					<h2>calendar</h2>
+				</div>
+			</div>
+			<div id="calendar" class='row'>
+					<div class='col-xs-6'>
+						<div id='rightBar'></div>
+						
+					</div>
+					<div class='col-xs-6'>
+						<div id='boxes'></div>
+					</div>
+			</div>
+			<div class='row'>
+				<div id="infoBox" class='col-xs-12'>
+					<p>TIME == MONEY</p>
+					
+				</div>
+				<img id='time'  src='/time.png'>
+			</div>
+		</div>
+		<script src='/jquery.js'></script>
+		<script src='/date.js'></script>
+		<script src='/bootstrap.min.js'></script>
+	</body>
+</html>
